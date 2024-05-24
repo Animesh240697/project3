@@ -53,39 +53,39 @@
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>
-        <!-- Remove configuration here -->
+        <!-- Remove the entire plugin configuration here -->
       </plugin>
     </plugins>
-
-    <!-- Move the <reporting> section here -->
-    <reporting>
-      <plugins>
-        <plugin>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jxr-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <artifactId>maven-javadoc-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <artifactId>maven-pmd-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-report-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>taglist-maven-plugin</artifactId>
-        </plugin>
-      </plugins>
-    </reporting>
   </build>
+
+  <!-- Move the <reporting> section outside of the <build> -->
+  <reporting>
+    <plugins>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jxr-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-pmd-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>taglist-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <dependencyManagement>
     <dependencies>
